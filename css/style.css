@@ -1,0 +1,41 @@
+/* generales */
+body{
+    background-color: lightgreen;
+}
+a{
+    text-decoration: none;
+}
+
+/* Clases */
+.header-container{
+    background-color: lightgrey;
+}
+.logo-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-bar {
+    display: flex;
+    background-color: lightgray;
+    border: 2px solid black;
+}
+.nav-bar li {
+    list-style: none;
+    margin: 0  auto;
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-right: 1px solid black;
+}
+.nav-bar li:last-child {
+    border-right: none;
+}
+.nav-bar li a {
+    color: black;
+}
+.buscador-carrito{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
