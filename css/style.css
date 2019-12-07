@@ -2,18 +2,17 @@
 * {
     box-sizing: border-box;
 }
-body{
-    background-color: lightgreen;
-}
 a{
     text-decoration: none;
     color: inherit;
 }
-
-/* Header */
-.header-container{
-    background-color: lightsalmon;
+li {
+    list-style: none;
 }
+h2 {
+    text-align: center;
+}
+/* Header */
 .logo-title {
     display: flex;
     justify-content: center;
@@ -25,7 +24,6 @@ a{
     border: 2px solid black;
 }
 .nav-bar li {
-    list-style: none;
     margin: 0  auto;
     display: block;
     width: 100%;
@@ -48,7 +46,6 @@ a{
 }
 /* Slider */
 .carousel-container {
-    background-color: lightskyblue;
     padding-bottom: 10px;
     border-bottom: 1px solid black;
 }
@@ -83,6 +80,22 @@ a{
     width: 100%;
 }
 .button-container {
+    margin-bottom: 20px;
     position: relative;
     left: 40%
+}
+.articles-container {
+    border-bottom: 1px solid black;
+}
+/* Footer */
+
+.contact-bar{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.contact-container {
+    margin-top: 20px
 }
