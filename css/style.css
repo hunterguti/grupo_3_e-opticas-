@@ -6,7 +6,7 @@ a{
     text-decoration: none;
 }
 
-/* Clases */
+/* Header */
 .header-container{
     background-color: lightgrey;
 }
@@ -38,4 +38,11 @@ a{
     margin-bottom: 10px;
     display: flex;
     justify-content: flex-end;
+}
+.fas {
+    color:inherit;
+}
+/* Main */
+.d-block {
+    margin: 0 auto;
 }
