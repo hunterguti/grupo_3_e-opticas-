@@ -45,6 +45,10 @@ h2 {
     color:black;
 }
 /* Footer */
+footer {
+    margin-top: 20px;
+    border-top: 1px solid black;
+}
 .contact-bar{
     margin-top: 20px;
     display: flex;

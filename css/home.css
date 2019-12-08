@@ -34,10 +34,6 @@
     width: 100%;
 }
 .button-container {
-    margin-bottom: 20px;
     position: relative;
     left: 40%
-}
-.articles-container {
-    border-bottom: 1px solid black;
 }
