@@ -19,6 +19,9 @@ h2 {
     justify-content: center;
     align-items: center;
 }
+.sesion {
+    text-align: end;
+}
 .nav-bar li {
     background-color: lightgray;
     margin-bottom: 10px;
