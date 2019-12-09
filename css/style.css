@@ -1,5 +1,6 @@
 /* generales */
 * {
+    padding: 0px;
     box-sizing: border-box;
 }
 a{
@@ -18,20 +19,11 @@ h2 {
     justify-content: center;
     align-items: center;
 }
-.nav-bar {
-    display: flex;
-    background-color: lightgray;
-    border: 2px solid black;
-}
 .nav-bar li {
-    margin: 0  auto;
-    display: block;
-    width: 100%;
+    background-color: lightgray;
+    margin-bottom: 10px;
     text-align: center;
-    border-right: 1px solid black;
-}
-.nav-bar li:last-child {
-    border-right: none;
+    border: 2px solid black;
 }
 .nav-bar li a {
     color: black;
@@ -50,12 +42,19 @@ footer {
     border-top: 1px solid black;
 }
 .contact-bar{
-    margin-top: 20px;
+    margin: 20px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 }
 .contact-container {
-    margin-top: 20px
+    margin-top: 20px;
+    align-items: center;
+}
+.contact-bar li {
+    text-align: center;
+}
+.footer-row {
+    justify-content: center;
 }
