@@ -7,7 +7,6 @@
 
 <body>
 
-    <div class=container>
 
         <! HEADER -->
         <%- include('./partials/header') %>
@@ -18,14 +17,17 @@
         <! CARRUSEL DE PRODUCTOS -->
 
         <! PRODUCTOS -->
-        <%- include('./partials/articulos'), {productos: productos} %>
+        <%- include('./partials/articulos') %>
+        <div class="button-container">
+                <button type="button" class="btn btn-primary">Ver todos los productos</button>
+            </div>
+        </div>
         <! PRODUCTOS -->
 
         <! FOOTER -->
         <%- include('./partials/footer') %>
         <! FOOTER -->
 
-        </div>
 
 
 
