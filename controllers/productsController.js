@@ -18,8 +18,9 @@ const controller = {
         res.render('agregar-producto')
     },
     create: (req, res) => {
-        
-        res.send('viaje por post!')
+        let producto = req.body
+        console.log(producto)
+        res.redirect('/products')
     },
 }
 
