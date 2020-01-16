@@ -1,17 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/04c3c27a56.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../grupo_3_e-opticas-/css/style.css">
-    <link rel="stylesheet" href="css/agregar-producto.css">
-    <title>Agregar Producto</title>
-</head>
+    <! HEAD -->
+    <%- include('./partials/head') %>
+    <! HEAD -->
 
 <body>
     <div class="container">
@@ -20,8 +12,8 @@
             <header>
                 <div class="logo-title">
                     <div class="logo">
-                        <a href="home.html">
-                            <img src="../grupo_3_e-opticas-/images/logo.png" alt="logo" height="100px">
+                        <a href="/">
+                            <img src="/images/logo.png" alt="logo" height="100px">
                         </a>
                     </div>
                     <h2>TITULO</h2>
@@ -52,16 +44,18 @@
 
         <main>
             <div class="producto-container">
-                <h2>Producto</h2>
-                <form action="">
+                <h2>Producto nuevo</h2>
+                <form method="POST" action="/products/create">
                     <label for="nombre">Nombre</label><br>
                     <input type="text" name="nombre" id="nombre"><br>
                     <label for="descripcion">Descripcion</label><br>
                     <input type="text" name="descripcion" id="descripcion"><br>
-                    <label for="categoria">Categotia</label><br>
+                    <label for="categoria">Categoria</label><br>
                     <input type="text" name="categoria" id="categoria"><br>
                     <label for="precio">Precio</label><br>
                     <input type="number" name="precio" id="precio"><br>
+                    <label for="color">Colores</label><br>
+                    <input type="text" name="color" id="color"><br>
                     <br>
                     <button class="btn btn-dark" type="submit">Agregar Producto</button>
                 </form>
@@ -73,16 +67,17 @@
                 <h2>Contacto</h2>
                 <div class="row footer-row">
                     <ul class="contact-bar">
-                        <li class="col-12 col-md-2"><a href=""><i class="fab fa-whatsapp fa-2x"> Whatsapp</i></a></li>
-                        <li class="col-12 col-md-2"><a href=""><i class="fab fa-instagram fa-2x"> Instagram</i></a></li>
-                        <li class="col-12 col-md-2"><a href=""><i class="fab fa-facebook-f fa-2x"> Facebook</i></a></li>
-                        <li class="col-12 col-md-2"><a href=""><i class="fab fa-twitter fa-2x"> Twitter</i></a></li>
-                        <li class="col-12 col-md-2"><a href=""><i class="fas fa-envelope fa-2x"> Email</i></a></li>
+                        <li class="col-12 col-md-2"><a href="/"><i class="fab fa-whatsapp fa-2x"> Whatsapp</i></a></li>
+                        <li class="col-12 col-md-2"><a href="/"><i class="fab fa-instagram fa-2x"> Instagram</i></a></li>
+                        <li class="col-12 col-md-2"><a href="/"><i class="fab fa-facebook-f fa-2x"> Facebook</i></a></li>
+                        <li class="col-12 col-md-2"><a href="/"><i class="fab fa-twitter fa-2x"> Twitter</i></a></li>
+                        <li class="col-12 col-md-2"><a href="/"><i class="fas fa-envelope fa-2x"> Email</i></a></li>
                     </ul>
                 </div>
             </div>
         </footer>
     </div>
+
 </body>
 
 </html>

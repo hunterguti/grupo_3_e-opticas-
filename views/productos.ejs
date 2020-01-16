@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+    <link rel="stylesheet" href="/stylesheets/home.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Productos</title>
 </head>
-
 <body>
     <% for(i = 0; i < productos.length; i++) { %>
-        <div class="row articulos">
+        <div class="row articulos container">
             <section class="col-sm-12 col-md-6 col-lg-3">
                 <div class="article-box">
                     <a href="">
@@ -25,5 +26,4 @@
     <% } %>
     
 </body>
-
 </html>

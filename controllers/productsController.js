@@ -4,13 +4,22 @@ const productos = require('../data/productos.json')
 
 
 const controller = {
-    index: (req, res) => {
+    products: (req, res) => {
         res.render('productos', {productos: productos})
     },
-    product: (req, res) => {
+    productDetail: (req, res) => {
         let id = req.params.idProducto
         let producto = productos.find(p => p.id == id)
-        res.render('vistaProducto', {producto: producto})
+        res.render('vistaProducto', {
+            producto: producto,
+        })
+    },
+    createForm: (req, res) => {
+        res.render('agregar-producto')
+    },
+    create: (req, res) => {
+        
+        res.send('viaje por post!')
     },
 }
 
