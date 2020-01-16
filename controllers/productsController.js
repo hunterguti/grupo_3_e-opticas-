@@ -30,9 +30,18 @@ const controller = {
         products.push(producto)
 
         fs.writeFileSync(productsFilePath, JSON.stringify(products))
-        
+
         res.redirect('/products')
     },
+    edit: (req, res) => {
+        let id = req.params.idProducto
+        let producto = products.find(p => p.id == id)
+
+        res.render('editProduct', {producto: producto})
+    },
+    update: (req,res) => {
+        res.send("Viaje por Put!")
+    }
 }
 
 module.exports = controller
