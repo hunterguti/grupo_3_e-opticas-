@@ -5,19 +5,32 @@
 <%- include('./partials/head') %>
 <! HEAD -->
 <body>
+    <! HEADER -->
+    <%- include('./partials/header') %>
+    <! HEADER -->
     <div class="row articulos">
         <section class="col-sm-12 col-md-6 col-lg-3">
             <div class="article-box">
-                <a href="">
                     <img src="<%= producto.image %>" alt="imagen producto" class="imagen-producto">
                     <div class="article-data">
                         <h3><%= producto.name %></h3>
                         <p><%= producto.description %></p>
                     </div>
-                </a>
+                <p>$<%= producto.price %></p>
+                <p><%= producto.colors %></p>
             </div>
+            <form action="/products/edit/<%= producto.id %>" method="get">
+                <input type="submit" value="Editar">
+            </form>
+            <form action="/products/delete/<%= producto.id %>?_method=DELETE" method="POST">
+                <input type="submit" value="Eliminar">
+            </form>
         </section>
     </div>
+    
+    <! FOOTER -->
+    <%- include('./partials/footer') %>
+    <! FOOTER -->
 </body>
 
 </html>

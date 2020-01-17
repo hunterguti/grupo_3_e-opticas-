@@ -40,7 +40,31 @@ const controller = {
         res.render('editProduct', {producto: producto})
     },
     update: (req,res) => {
-        res.send("put")
+        let arrayIndex
+
+		let product = products.find(function (p, index) {
+			if (p.id == req.params.id) {
+                arrayIndex = index
+                console.log(arrayIndex)
+				return true
+			}
+
+			return false
+        })
+        console.log(product);
+        
+
+		let editado = {
+			...product,
+			...req.body
+		}
+        console.log(editado);
+        
+		products[arrayIndex] = editado
+
+		fs.writeFileSync(productsFilePath, JSON.stringify(products))
+
+		res.redirect('/products')
     }
 }
 
