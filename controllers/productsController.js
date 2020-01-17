@@ -40,7 +40,7 @@ const controller = {
         res.render('editProduct', {producto: producto})
     },
     update: (req,res) => {
-        res.send("Viaje por Put!")
+        res.send("put")
     }
 }
 

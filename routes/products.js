@@ -12,5 +12,9 @@ router.get('/:idProducto', productsController.productDetail) //Pagina de cada pr
 router.get('/edit/:idProducto', productsController.edit) //Pagina de formulario de edicion
 router.put('/edit/:idProducto', productsController.update) //Pagina de almacenamiento de edicion
 
+router.delete('/delete/:idProducto', (req, res) => {
+    res.redirect('delete')
+})
+
 
 module.exports = router;
