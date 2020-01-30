@@ -8,9 +8,9 @@ const controller = {
         res.render('productos', {productos: products})
     },
     productDetail: (req, res) => {
-        let id = req.params.idProducto
+        let id = req.params.id
         let producto = products.find(p => p.id == id)
-        res.render('vistaProducto', {
+        res.render('details', {
             producto: producto,
         })
     },
@@ -34,38 +34,36 @@ const controller = {
         res.redirect('/products')
     },
     edit: (req, res) => {
-        let id = req.params.idProducto
-        let producto = products.find(p => p.id == id)
+		let producto = products.find(function (p) {
+			return p.id == req.params.id
+		})
 
         res.render('editProduct', {producto: producto})
     },
     update: (req,res) => {
-        let arrayIndex
+		let arrayIndex
 
 		let product = products.find(function (p, index) {
 			if (p.id == req.params.id) {
-                arrayIndex = index
-                console.log(arrayIndex)
+				arrayIndex = index
 				return true
 			}
 
 			return false
-        })
-        console.log(product);
-        
-
+		})
+		console.log('el array es',arrayIndex);
+		
 		let editado = {
 			...product,
 			...req.body
 		}
-        console.log(editado);
-        
+
 		products[arrayIndex] = editado
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(products))
 
-		res.redirect('/products')
-    }
+		res.redirect('/products/' + req.params.id)
+    },
 }
 
 module.exports = controller

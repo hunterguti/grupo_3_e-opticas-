@@ -12,7 +12,7 @@
         <main>
             <div class="producto-container">
                 <h2>Editar Producto</h2>
-                <form method="POST" action="/products/edit/<%= producto.id %>?_method=PUT">
+                <form method="POST" action="/products/edit/<%=producto.id%>?_method=PUT">
                     <label for="nombre">Nombre</label><br>
                     <input type="text" name="name" id="nombre" value="<%= producto.name %>"><br>
                     <label for="descripcion">Descripcion</label><br>
